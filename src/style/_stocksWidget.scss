@@ -1,0 +1,79 @@
+.stocksWidgetContainer {
+  grid-area: footer;
+  display: flex;
+
+  .tabs {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 30%);
+
+    .tabItem {
+      padding: 50px;
+      display: flex;
+      justify-content: space-between;
+      width: 350px;
+      align-items: flex-start;
+      cursor: pointer;
+
+      &.active {
+        background: #f8f8f8;
+      }
+
+      .market {
+        display: flex;
+        flex-direction: column;
+
+        .displayName,
+        .marketValue {
+          font-weight: bold;
+        }
+
+        .displayName {
+          font-size: 20px;
+          color: #000;
+          margin-bottom: 20px;
+        }
+
+        .marketValue {
+          font-size: 16px;
+          color: #cacaca;
+        }
+      }
+
+      .fluctuation {
+        font-weight: bold;
+        font-size: 30px;
+        color: #cacaca;
+
+        &.up {
+          color: #63da38;
+        }
+
+        &.down {
+          color: #ff3636;
+        }
+      }
+    }
+  }
+
+  .chartContainer {
+    flex: 100%;
+  }
+
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+    flex-direction: column;
+    box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 30%);
+
+    .tabs {
+      flex-direction: row;
+
+      .tabItem {
+        width: auto;
+        padding: 40px 50px;
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+      }
+    }
+  }
+}

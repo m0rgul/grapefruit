@@ -1,0 +1,21 @@
+// generic theme stuff
+@import './fonts';
+@import './_colors';
+@import './typography';
+
+//specific modules
+@import './_mainApp';
+@import './_nav';
+@import './newsWidget';
+@import './weatherWidget';
+@import './stocksWidget';
+
+body,
+body * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  font-family: 'Montserrat';
+}

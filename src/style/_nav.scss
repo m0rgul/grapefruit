@@ -1,0 +1,98 @@
+.mainNavContainer {
+  grid-area: header;
+  height: 60px;
+  z-index: 1;
+  padding: 0 30px;
+  background-color: $nav-background;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex: 100%;
+
+  .hamburgerMenuButton {
+    width: 30px;
+    height: 30px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    opacity: 1;
+    transition: 0.3s;
+
+    &.hidden {
+      opacity: 0;
+    }
+
+    .hamburgerMenuLine {
+      height: 2px;
+      background-color: #fff;
+      width: 25px;
+
+      &:nth-child(2) {
+        width: 15px;
+      }
+    }
+  }
+
+  .mainNavBar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 250px;
+    z-index: 5;
+    background-color: $nav-background;
+    transition: 0.5s;
+    padding: 100px 30px;
+
+    &.show {
+      left: 0px;
+    }
+
+    &.hide {
+      left: -280px;
+    }
+
+    ul {
+      list-style: none;
+      li {
+        color: #fff;
+        cursor: pointer;
+        padding: 8px;
+      }
+    }
+  }
+
+  .userMenuContainer {
+    display: flex;
+    flex-direction: row;
+
+    & > div {
+      margin: 0 15px;
+    }
+
+    .navIconBtn {
+      width: 30px;
+      height: 30px;
+      margin: 0;
+      padding: 0;
+      border: none;
+      background: none;
+      cursor: pointer;
+    }
+
+    .userMenu {
+      .navIconBtn {
+        border-radius: 50%;
+        overflow: hidden;
+
+        img {
+          max-height: 100%;
+          max-width: 100%;
+        }
+      }
+    }
+  }
+}
